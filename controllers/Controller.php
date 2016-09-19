@@ -9,10 +9,11 @@ class Controller {
     }
 
     public function run() {
+        $server = 'http://'.$_SERVER["SERVER_NAME"];
         $password = (empty($_POST)) ?
             $this->model->getInstructions() :
             $this->model->getPassword($_POST);
 
-        include 'views/view.php';
+        include '$server/views/view.php';
     }
 }
