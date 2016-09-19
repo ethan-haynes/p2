@@ -1,7 +1,7 @@
 <?php
 include_once("models/DataMapper.php");
 
-include_once("models/passwordDirector.php");
+include_once("models/PasswordDirector.php");
 include_once("models/PasswordBuilder.php");
 include_once("models/Password.php");
 
