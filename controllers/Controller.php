@@ -13,7 +13,6 @@ class Controller {
             $this->model->getInstructions() :
             $this->model->getPassword($_POST);
 
-        
         include 'views/view.php';
     }
 }
