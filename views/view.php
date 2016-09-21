@@ -28,9 +28,7 @@
             <div class="col-xs-1 col-md-2"></div>
             <!-- main column center -->
             <div class="col-md-8 container">
-                <p>
-                    <?= $password; ?>
-                </p>
+                <p><?= $password?></p>
                 <form action="index.php" method="POST" class="inner">
                     Word Count:
                         <input type="text" name="wordcount" value="1"><br>

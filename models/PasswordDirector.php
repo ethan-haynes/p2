@@ -1,5 +1,4 @@
 <?php
-include_once("./data/Messages.php");
 
 class PasswordDirector {
     private $builder;
@@ -14,7 +13,7 @@ class PasswordDirector {
         $wc = (integer) $_POST["wordcount"];
 
         if ($wc <= 0 || 9 <= $wc)
-            return INVALID_NUMBER;
+            return "ERROR";
 
         $this->builder->setUpperCase($uc);
         $this->builder->setNumbers($n);

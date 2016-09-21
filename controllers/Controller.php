@@ -13,6 +13,9 @@ class Controller {
             $this->model->getInstructions() :
             $this->model->getPassword($_POST);
 
+        if ($password == "ERROR")
+            $password = file_get_contents('./views/error.php');
+            
         include 'views/view.php';
     }
 }
