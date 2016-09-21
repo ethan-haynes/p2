@@ -16,7 +16,6 @@ class Model {
     public function getPassword()  {
         $passwordBuilder = new PasswordBuilder(DataMapper::retrieveData());
         $passwordDirector = new PasswordDirector($passwordBuilder);
-        $password = $passwordDirector->build();
-        return $password->assemblePassword();
+        return $passwordDirector->build();
     }
 }

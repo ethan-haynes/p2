@@ -1,4 +1,5 @@
 <?php
+include_once("./data/Messages.php");
 
 class PasswordDirector {
     private $builder;
@@ -12,11 +13,13 @@ class PasswordDirector {
         $sp = (isset($_POST["specialcharacters"])) ? true : false;
         $wc = (integer) $_POST["wordcount"];
 
+        if ($wc <= 0 || 9 <= $wc)
+            return INVALID_NUMBER;
+
         $this->builder->setUpperCase($uc);
         $this->builder->setNumbers($n);
         $this->builder->setSpecialChars($sp);
-        $this->builder->setWordCount(
-            ($wc <= 0 || 9 <= $wc) ? self::DEFAULT_WC : $wc);
+        $this->builder->setWordCount($wc);
         return $this->builder->build();
     }
 }

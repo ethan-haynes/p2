@@ -47,6 +47,6 @@ class PasswordBuilder {
     }
 
     public function build() {
-        return new Password($this);
+        return (new Password($this))->assemblePassword();
     }
 }

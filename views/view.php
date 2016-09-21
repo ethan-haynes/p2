@@ -28,18 +28,19 @@
             <div class="col-xs-1 col-md-2"></div>
             <!-- main column center -->
             <div class="col-md-8 container">
-
-                <?= $password; ?>
-                <form action="index.php" method="POST">
+                <p>
+                    <?= $password; ?>
+                </p>
+                <form action="index.php" method="POST" class="inner">
                     Word Count:
-                        <input type="text" name="wordcount"><br>
+                        <input type="text" name="wordcount" value="1"><br>
                     Numbers:
                         <input type="checkbox" name="numbers" value="y"><br>
                     Upper Case:
                         <input type="checkbox" name="uppercase" value="y"><br>
                     Special Characters:
-                        <input type="checkbox" name="specialcharacters" value="y">
-                    <input type="submit">
+                        <input type="checkbox" name="specialcharacters" value="y"><br>
+                    <input type="submit" class="btn btn-info">
                 </form>
 
             </div>
