@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Project 2</title>
@@ -51,7 +51,7 @@
                         <input type="checkbox" name="uppercase" value="y" id="uppercase">
                         <span id="caps">
                             Pascal Case:
-                            <input type="radio" name="caps" value="pc" checked="true">
+                            <input type="radio" name="caps" value="pc" checked>
                             All Caps:
                             <input type="radio" name="caps" value="ac"></span><br>
                     Special Characters:
