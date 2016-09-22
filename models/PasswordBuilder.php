@@ -1,4 +1,10 @@
 <?php
+
+/*
+ * PasswordBuilder Class -
+ * Builder class to gather allt he information needed to make a fully formed
+ * Password object.
+ */
 class PasswordBuilder {
     private $upperCase;
     private $allCaps;
@@ -64,6 +70,7 @@ class PasswordBuilder {
         return $this->wordList;
     }
 
+    # creates fully formed password object and calls its assemble method
     public function build() {
         return (new Password($this))->assemblePassword();
     }

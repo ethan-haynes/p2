@@ -1,5 +1,8 @@
 <?php
-
+/*
+ * DataMapper Class -
+ * Parses JSON file and puts data into a array to be accessed by the model layer
+ */
 final class DataMapper {
     const FILE_NAME = "./data/data.json";
     private function __construct() { }

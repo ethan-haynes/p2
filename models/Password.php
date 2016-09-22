@@ -1,4 +1,10 @@
 <?php
+
+/*
+ * Password Class -
+ * Does the heavy lifting of producing a password. Is only created as a fully
+ * formed object. Relies on dependency injection from Builder
+ */
 class Password {
     private $upperCase;
     private $allCaps;
@@ -64,16 +70,19 @@ class Password {
             if ($this->canAddSC($scCount))
                 $temp .= $this->addSpecialChars();
 
+            # adds temp to password
             $pwd .= $temp;
+            # increments counter
             $scCount++;
         }
 
-        //if word count is less than scCount, finish adding here
+        # if word count is less than scCount, finish adding here
         while ($this->canAddSC($scCount)) {
             $pwd .= $this->addSpecialChars();
             $scCount++;
         }
-        
+
+        # if all caps is set
         if ($this->allCaps)
             return strtoupper($pwd);
         else

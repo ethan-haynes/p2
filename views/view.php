@@ -39,6 +39,7 @@
                 </div>
                 <br>
                 <br>
+                <!-- value updated by model -->
                 <p><?= $password?></p>
                 <form action="index.php" method="POST" class="inner">
                     Word Count:
