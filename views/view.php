@@ -27,7 +27,7 @@
             <!-- main column left -->
             <div class="col-xs-1 col-md-2"></div>
             <!-- main column center -->
-            <div class="col-md-8 container text-center">
+            <div class="col-xs-8 col-md-8 container text-center">
                 <h1 class="title">
                     P2
                 </h1>
