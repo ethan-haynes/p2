@@ -5,6 +5,7 @@ class PasswordBuilder {
     private $specialChars;
     private $wordCount;
     private $wordList;
+    private $specialCharsCount;
 
     public function __construct($arr) {
         $this->wordList = $arr;
@@ -22,6 +23,10 @@ class PasswordBuilder {
         $this->specialChars = $specialChars;
     }
 
+    public function setSpecialCharsCount($specialCharsCount) {
+        $this->specialCharsCount = $specialCharsCount;
+    }
+
     public function setWordCount($wordCount) {
         $this->wordCount = $wordCount;
     }
@@ -36,6 +41,10 @@ class PasswordBuilder {
 
     public function getSpecialChars() {
         return $this->specialChars;
+    }
+
+    public function getSpecialCharsCount() {
+        return $this->specialCharsCount;
     }
 
     public function getWordCount() {

@@ -5,6 +5,7 @@ class Password {
     private $specialChars;
     private $wordCount;
     private $wordList;
+    private $specialCharsCount;
 
     #constants
     const MIN = 0;
@@ -19,6 +20,7 @@ class Password {
         $this->numbers = $b->getNumbers();
         $this->specialChars = $b->getSpecialChars();
         $this->wordCount = $b->getWordCount();
+        $this->specialCharsCount = $b->getSpecialCharsCount();
         $this->wordList = $b->getWordList();
     }
 
@@ -40,8 +42,13 @@ class Password {
         return $this->wordList[$j][self::WORD];
     }
 
+    private function canAddSC($scCount) {
+        return ($this->specialChars && $scCount < $this->specialCharsCount) ? true : false;
+    }
+
     public function assemblePassword() {
         $pwd = "";
+        $scCount = 0;
 
         for ($i=0; $i < $this->wordCount; $i++) {
             $temp = $this->addWord($i);
@@ -50,12 +57,19 @@ class Password {
                 $temp = $this->upperCase($temp);
 
             if ($this->numbers)
-                $temp .= $this->addNumber();
+                $temp .= $this->addNumber($scCount);
 
-            if ($this->specialChars)
+            if ($this->canAddSC($scCount))
                 $temp .= $this->addSpecialChars();
 
             $pwd .= $temp;
+            $scCount++;
+        }
+
+        //if word count is less than scCount, finish adding here
+        while ($this->canAddSC($scCount)) {
+            $pwd .= $this->addSpecialChars();
+            $scCount++;
         }
 
         return $pwd;
