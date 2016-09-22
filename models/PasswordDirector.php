@@ -6,7 +6,6 @@
  */
 class PasswordDirector {
     private $builder;
-    const DEFAULT_WC = 1;
     public function __construct(PasswordBuilder $builder) {
          $this->builder = $builder;
     }
