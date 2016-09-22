@@ -43,9 +43,15 @@
                     Word Count:
                         <input type="text" name="wordcount" value="1"><em class="note">*</em><br>
                     Numbers:
-                        <input type="checkbox" name="numbers" value="y"><br>
+                        <input type="checkbox" name="numbers" value="y">
+                        <br>
                     Upper Case:
-                        <input type="checkbox" name="uppercase" value="y"><br>
+                        <input type="checkbox" name="uppercase" value="y" id="uppercase">
+                        <span id="caps">
+                            Pascal Case:
+                            <input type="radio" name="caps" value="pc" checked="true">
+                            All Caps:
+                            <input type="radio" name="caps" value="ac"></span><br>
                     Special Characters:
                         <input type="checkbox" name="specialcharacters" value="y" id="specialChars">
                         <span id="numSC">Number:

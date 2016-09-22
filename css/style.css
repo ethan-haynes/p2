@@ -45,7 +45,7 @@ li[role="presentation"] a:hover {
     color: #636AA2;
 }
 
-#numSC {
+#numSC, #caps {
     visibility: hidden;
 }
 

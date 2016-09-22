@@ -7,9 +7,10 @@ class PasswordDirector {
          $this->builder = $builder;
     }
     public function build() {
-        $uc = (isset($_POST["uppercase"])) ? true : false;
-        $n  = (isset($_POST["numbers"])) ? true : false;
-        $sp = (isset($_POST["specialcharacters"])) ? true : false;
+        $uc = isset($_POST["uppercase"]);
+        $ac  = (isset($_POST["caps"]) && $_POST["caps"] == "ac") ? true : false;
+        $n  = isset($_POST["numbers"]);
+        $sp = isset($_POST["specialcharacters"]);
         $wc = (integer) $_POST["wordcount"];
         $sc = (integer) $_POST["numSC"];
 
@@ -17,6 +18,7 @@ class PasswordDirector {
             return "ERROR";
 
         $this->builder->setUpperCase($uc);
+        $this->builder->setAllCaps($ac);
         $this->builder->setNumbers($n);
         $this->builder->setSpecialChars($sp);
         $this->builder->setWordCount($wc);

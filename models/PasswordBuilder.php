@@ -1,6 +1,7 @@
 <?php
 class PasswordBuilder {
     private $upperCase;
+    private $allCaps;
     private $numbers;
     private $specialChars;
     private $wordCount;
@@ -13,6 +14,10 @@ class PasswordBuilder {
 
     public function setUpperCase($upperCase) {
         $this->upperCase = $upperCase;
+    }
+
+    public function setAllCaps($allCaps) {
+        $this->allCaps = $allCaps;
     }
 
     public function setNumbers($numbers) {
@@ -33,6 +38,10 @@ class PasswordBuilder {
 
     public function getUpperCase() {
         return $this->upperCase;
+    }
+
+    public function getAllCaps() {
+        return $this->allCaps;
     }
 
     public function getNumbers() {

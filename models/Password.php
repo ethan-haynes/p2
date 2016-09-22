@@ -1,6 +1,7 @@
 <?php
 class Password {
     private $upperCase;
+    private $allCaps;
     private $numbers;
     private $specialChars;
     private $wordCount;
@@ -17,6 +18,7 @@ class Password {
 
     public function __construct(PasswordBuilder $b) {
         $this->upperCase = $b->getUpperCase();
+        $this->allCaps = $b->getAllCaps();
         $this->numbers = $b->getNumbers();
         $this->specialChars = $b->getSpecialChars();
         $this->wordCount = $b->getWordCount();
@@ -43,7 +45,7 @@ class Password {
     }
 
     private function canAddSC($scCount) {
-        return ($this->specialChars && $scCount < $this->specialCharsCount) ? true : false;
+        return $this->specialChars && $scCount < $this->specialCharsCount;
     }
 
     public function assemblePassword() {
@@ -71,7 +73,10 @@ class Password {
             $pwd .= $this->addSpecialChars();
             $scCount++;
         }
-
-        return $pwd;
+        
+        if ($this->allCaps)
+            return strtoupper($pwd);
+        else
+            return $pwd;
     }
 }
