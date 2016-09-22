@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
     <body>
         <div class="row">
@@ -27,7 +28,7 @@
             <!-- main column left -->
             <div class="col-xs-1 col-md-2"></div>
             <!-- main column center -->
-            <div class="col-xs-8 col-md-8 container text-center">
+            <div class="col-xs-10 col-md-8 container text-center">
                 <h1 class="title">
                     P2
                 </h1>
@@ -58,7 +59,7 @@
                         <input type="text" name="numSC" value="1"><em class="note">*</em></span>
                         <br>
                         <br>
-                        <div class="col-md-12 text-center">
+                        <div class="col-xs-12 col-md-12 text-center">
                             <input type="submit" class="btn btn-info">
                         </div>
                 </form>
@@ -77,6 +78,5 @@
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>
-
     </body>
 </html>

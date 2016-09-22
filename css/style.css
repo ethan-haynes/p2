@@ -8,6 +8,11 @@
 
 @media screen and (max-width: 480px) {
  li[role="presentation"] a { font-size:12px; }
+ body, html { font-size: 12px;}
+}
+
+@media screen and (max-width: 480px) {
+ li[role="presentation"] a { font-size:12px; }
 }
 
 html, body {
