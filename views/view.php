@@ -15,8 +15,8 @@
                     <ul class="nav nav-pills">
                         <li role="presentation"><a href="http://p1.ehay.me">Project 1</a></li>
                         <li role="presentation"><a href="http://p2.ehay.me">Project 2</a></li>
-                        <li role="presentation"><a href="#">Project 3</a></li>
-                        <li role="presentation"><a href="#">Project 4</a></li>
+                        <li role="presentation"><a href="http://p3.ehay.me">Project 3</a></li>
+                        <li role="presentation"><a href="http://p4.ehay.me">Project 4</a></li>
                     </ul>
                 </div>
             </nav>
